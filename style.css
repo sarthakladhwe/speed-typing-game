@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: teal;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+
+header {
+    padding: 0.75em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3 );
+}
+
+.difficulty {
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 0.25em 0.5em;
+}
+
+.difficulty:focus {
+    cursor: pointer;
+}
+
+.difficulty:focus {
+    outline: none;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(50%);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    background-color: rgba(0, 0, 0, 0.3 );
+    border-radius: 5px;
+}
+
+.time-score {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.type-word {
+    padding: 0.25em 0.5em;
+    width: 60%;
+    border: none;
+    border-radius: 2px;
+}
+
+.type-word:focus {
+    outline: 4px solid teal;
+}

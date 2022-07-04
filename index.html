@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Speed Typing Game</title>
 </head>
 <body>
     <header>
-        <select>
+        <label for="difficulty">Select Difficulty: </label>
+        <select id="difficulty" class="difficulty">
             <option>Easy</option>
             <option>Medium</option>
             <option>Hard</option>
         </select>
     </header>
     <div class="container">
+
         <h1>Speed Typer</h1>
-        <div>
-            <p>Time Left: </p>
-            <p>Score: </p>
+        <div class="time-score">
+            <p id="time-left">Time Left: </p>
+            <p id="score">Score: </p>
         </div>
         <div>
             <p>Type the following</p>
