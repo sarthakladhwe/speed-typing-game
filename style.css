@@ -1,5 +1,4 @@
 * {
-    margin: 0;
     box-sizing: border-box;
 }
 
@@ -7,9 +6,23 @@ body {
     background-color: teal;
     color: #fff;
     font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Typography */
+
+h1, h2, p {
+    margin: 0;
 }
 
 header {
+    position: absolute;
+    top: 0;
+    width: 100%;
     padding: 0.75em;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3 );
@@ -32,20 +45,27 @@ header {
 
 .container {
     width: 400px;
-    margin: 0 auto;
-    transform: translateY(50%);
+    max-width: 90%;
     padding: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 15px;
+    row-gap: 10px;
     background-color: rgba(0, 0, 0, 0.3 );
     border-radius: 5px;
 }
 
+.container > h2 {
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding: 0.2em;
+}
+
 .time-score {
     width: 100%;
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,4 +80,22 @@ header {
 
 .type-word:focus {
     outline: 4px solid teal;
+}
+
+.word {
+    text-align: center;
+}
+
+.btn-settings {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    padding: 0.25em 0.5em;
+    font-size: 1.125rem;
+    border-radius: 3px;
+    border: none;
+}
+
+.btn-settings:hover {
+    cursor: pointer;
 }
