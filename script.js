@@ -1,0 +1,6 @@
+const difficultyEl = document.getElementById('difficulty')
+const timeLeftEl = document.getElementById('time-left')
+const scoreEl = document.getElementById('score')
+const wordEl = document.getElementById('word')
+const wordInputEl = document.getElementById('word-input')
+const settingsBtn = document.getElementById('settings')
