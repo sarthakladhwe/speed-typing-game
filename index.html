@@ -20,21 +20,25 @@
             <option value="hard">Hard</option>
         </select>
     </header>
-    <div class="container">
+    <div id="start-game-container" class="container">
         <h2>Speed Typer</h2>
         <div class="time-score">
             <p>Time Left: <span id="time-left">10s</span></p>
             <p>Score: <span id="score">0</span></p>
         </div>
-        <div>
+        <div class="word-container">
             <p>Type the following</p>
             <h1 class="word" id="word"></h1>
         </div>
-        <input type="text" class="type-word" id="word-input" placeholder="Type the word here..." />
+        <input type="text" class="type-word" id="word-input" placeholder="Type the word here..." autocomplete="off" />
     </div>
-    <div class="start-game">
-        <button id="start-game" class="btn-start">Start Game</button>
+    <div id="stop-game-container" class="container endgame">
+        <h2>Speed Typer</h2>
+        <div class="final-score">
+            <p>Score: <span id="final-score">0</span></p>
+        </div>
     </div>
+    <button id="start-game" class="btn-start">Start Game</button>
     <button class="btn-settings" id="settings">
         <i class="fa-solid fa-gear"></i>
     </button>

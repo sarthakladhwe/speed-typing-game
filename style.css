@@ -73,6 +73,10 @@ header {
     align-items: center;
 }
 
+.word-container {
+    text-align: center;
+}
+
 .type-word {
     padding: 0.25em 0.5em;
     width: 60%;
@@ -86,6 +90,13 @@ header {
 
 .word {
     text-align: center;
+}
+
+.final-score {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.125rem;
+    font-weight: 700;
 }
 
 .btn-start {
