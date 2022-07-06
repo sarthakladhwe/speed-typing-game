@@ -14,6 +14,7 @@ let difficulty = "easy";
 let score = 0;
 let timeLeft = 10;
 let randomWord;
+let intervalId;
 
 async function getWords() {
     const wordLength = difficulty === "easy" ? 5 : difficulty === "medium" ? 8 : 11;
@@ -24,17 +25,19 @@ async function getWords() {
     randomWord = data[0]
 }
 
-function startCountdown() {
-    const intervalId = setInterval(() => {
-        timeLeft--
-        timeLeftEl.innerText = `${timeLeft}s`
-    }, 1000)
-    if(timeLeft <= 0) {
-        stopGame()
-        timeLeft = 0
+function updateCountdown() {
+    timeLeft--
+    timeLeftEl.innerText = `${timeLeft}s`
+
+    if(timeLeft === 0) {
         clearInterval(intervalId)
+        stopGame()
     }
-    console.log(timeLeft)
+}
+
+function updateScore() {
+    score++
+    scoreEl.textContent = score
 }
 
 function stopGame() {
@@ -42,6 +45,8 @@ function stopGame() {
     gameEndContainer.style.display = "block"
     startGameBtn.style.visibility = "visible"
     document.getElementById('final-score').textContent = score
+    score = 0
+    timeLeft = 10
 }
 
 //Event Listeners
@@ -52,20 +57,20 @@ difficultyEl.addEventListener('change', (e) => {
 
 startGameBtn.addEventListener('click', () => {
     startGameBtn.style.visibility = "hidden"
+    gameEndContainer.style.display = "none"
+    gameContainer.style.display = "flex"
     getWords()
-    startCountdown()
-    wordInputEl.autofocus = true;
+    intervalId = setInterval(updateCountdown, 1000)
+    wordInputEl.focus();
 })
 
 wordInputEl.addEventListener('input', (e) => {
     const insertedWord = e.target.value
     if(insertedWord === randomWord) {
-        getWords()
         wordInputEl.value = ""
-        score++
-        scoreEl.textContent = score
-        timeLeft += 4
-        timeLeftEl.innerText = `${timeLeft}s`
+        getWords()
+        updateScore()
+        timeLeft += difficulty === "easy" ? 4 : difficulty === "medium" ? 3 : 3;
     }
 })
 
