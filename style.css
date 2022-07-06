@@ -94,7 +94,7 @@ header {
     border: none;
     border-radius: 3px;
     font-weight: 700;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .btn-start:hover {
