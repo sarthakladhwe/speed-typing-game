@@ -112,17 +112,3 @@ header {
     cursor: pointer;
     transform: scale(105%);
 }
-
-.btn-settings {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    padding: 0.25em 0.5em;
-    font-size: 1.125rem;
-    border-radius: 3px;
-    border: none;
-}
-
-.btn-settings:hover {
-    cursor: pointer;
-}
